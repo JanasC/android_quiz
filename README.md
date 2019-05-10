@@ -3,7 +3,7 @@
 Quiz app for Udacity Android Basics Nanodegree by Google. 
 
 # Description
-Created an educational app that quizzes a user about a solar system.
+Created an educational app that quizzes a user about the solar system.
 
 # Requirements
 - The grading logic checks each answer correctly. The app accurately calculates the number of correct 
