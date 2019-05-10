@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ PROJECT LICENSE
+  ~
+  ~ This project was submitted by Janas Chatkevicius as part of the Nanodegree At Udacity.
+  ~
+  ~ As part of Udacity Honor code, your submissions must be your own work, hence
+  ~ submitting this project as yours will cause you to break the Udacity Honor Code
+  ~ and the suspension of your account.
+  ~
+  ~ Me, the author of the project, allow you to check the code as a reference, but if
+  ~ you submit it, it's your own responsibility if you get expelled.
+  ~
+  ~ Copyright (c) 2018 Janas Chatkevicius
+  ~
+  ~ Besides the above notice, the following license applies and this license notice
+  ~ must be included in all works derived from this project.
+  ~
+  ~ MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/background_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/question_one_radio_group"
+            style="@style/CustomRadioGroupButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/question_one_text_view"
+                style="@style/CustomTextViewInRadioGroup"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="@string/question_one_text_view"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_one_answer_one_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_one_answer_one_radiobutton"
+                app:buttonTint="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/question_one_answer_two_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_one_answer_two_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_one_answer_three_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_one_answer_three_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/question_two_radio_group"
+            style="@style/CustomRadioGroupButton"
+            android:layout_marginTop="15dp"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_one_radio_group">
+
+            <TextView
+                android:id="@+id/question_two_text_view"
+                style="@style/CustomTextViewInRadioGroup"
+                android:layout_marginTop="15dp"
+                android:text="@string/question_two_text_view"
+                android:textAlignment="center"
+                app:fontFamily="@font/montserrat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/question_two_answer_one_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_two_answer_one_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_two_answer_two_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_two_answer_two_radiobutton"
+                app:buttonTint="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/question_two_answer_three_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_two_answer_three_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/question_three_radio_group"
+            style="@style/CustomRadioGroupButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_two_radio_group">
+
+            <TextView
+                android:id="@+id/question_three_text_view"
+                style="@style/CustomRadioButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/question_three_text_view"
+                app:fontFamily="@font/montserrat"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <RadioButton
+                android:id="@+id/question_three_answer_one_radiobutton"
+                style="@style/CustomRadioButton"
+                android:paddingRight="10dp"
+                android:text="@string/question_three_answer_one_radiobutton"
+                app:buttonTint="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/question_three_answer_two_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_three_answer_two_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_three_answer_three_radiobutton"
+                style="@style/CustomRadioButton"
+                android:paddingRight="10dp"
+                android:text="@string/question_three_answer_three_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/question_four_radio_group"
+            style="@style/CustomRadioGroupButton"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_three_radio_group">
+
+            <TextView
+                android:id="@+id/question_four_text_view"
+                style="@style/CustomTextViewInRadioGroup"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/question_four_text_view"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_four_answer_one_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_four_answer_one_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_four_answer_two_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_four_answer_two_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_four_answer_three_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_four_answer_three_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/question_five_radio_group"
+            style="@style/CustomRadioGroupButton"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_four_radio_group">
+
+            <TextView
+                android:id="@+id/question_five_text_view"
+                style="@style/CustomTextViewInRadioGroup"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/question_five_text_view"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_five_answer_one_radiobutton"
+                style="@style/CustomRadioButton"
+                android:layout_marginRight="7dp"
+                android:text="@string/question_five_answer_one_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_five_answer_two_radiobutton"
+                style="@style/CustomRadioButton"
+                android:text="@string/question_five_answer_two_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+            <RadioButton
+                android:id="@+id/question_five_answer_three_radiobutton"
+                style="@style/CustomRadioButton"
+                android:paddingRight="21dp"
+                android:text="@string/question_five_answer_three_radiobutton"
+                app:buttonTint="@android:color/white"
+                app:fontFamily="@font/montserrat" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/question_six_text_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/question_six_text_text"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_five_radio_group" />
+
+        <EditText
+            android:id="@+id/question_six_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/question_six_edit_text_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_six_text_text" />
+
+        <TextView
+            android:id="@+id/question_seven_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/question_seven_text_view"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_six_edit_text" />
+
+        <CheckBox
+            android:id="@+id/question_seven_answer_one_checkbox"
+            style="@style/CustomCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_seven_answer_one_checkbox"
+            app:buttonTint="@android:color/white"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_seven_text_view" />
+
+        <CheckBox
+            android:id="@+id/question_seven_answer_two_checkbox"
+            style="@style/CustomCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/question_seven_answer_two_checkbox"
+            app:buttonTint="@android:color/white"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@id/question_seven_answer_one_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/question_seven_answer_one_checkbox" />
+
+        <CheckBox
+            android:id="@+id/question_seven_answer_three_checkbox"
+            style="@style/CustomCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/question_seven_answer_three_checkbox"
+            app:buttonTint="@android:color/white"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@id/question_seven_answer_one_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/question_seven_answer_two_checkbox" />
+
+        <CheckBox
+            android:id="@+id/question_seven_answer_four_checkbox"
+            style="@style/CustomCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/question_seven_answer_four_checkbox"
+            app:buttonTint="@android:color/white"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@id/question_seven_answer_three_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/question_seven_answer_three_checkbox" />
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="submitAnswers"
+            android:text="@string/submit_button_text"
+            android:textSize="14sp"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_seven_answer_four_checkbox" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
